@@ -45,17 +45,17 @@ typedef enum {
         CGFloat move_x = 0;
         CGFloat move_y = 0;
         
-        if (command == MOVE_LEFT) {
-            move_x = -MOVE_DISTANCE;
-        }
-        else if (command == MOVE_RIGHT) {
-            move_x = MOVE_DISTANCE;
-        }
-        else if (command == MOVE_UP) {
-            move_y = -MOVE_DISTANCE;
+        if (command == MOVE_UP) {
+            move_y = -30;
         }
         else if (command == MOVE_DOWN) {
-            move_y = MOVE_DISTANCE;
+            move_y = 30;
+        }
+        else if (command == MOVE_LEFT) {
+            move_x =-30;
+        }
+        else if (command == MOVE_RIGHT){
+            move_x =30;
         }
         
         if (move_x != 0 || move_y != 0) {
