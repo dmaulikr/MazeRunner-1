@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		528ED96F198EAD2C00E47B23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED96E198EAD2C00E47B23 /* Foundation.framework */; };
+		528ED971198EAD2C00E47B23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED970198EAD2C00E47B23 /* CoreGraphics.framework */; };
+		528ED973198EAD2C00E47B23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED972198EAD2C00E47B23 /* UIKit.framework */; };
+		528ED975198EAD2C00E47B23 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED974198EAD2C00E47B23 /* SpriteKit.framework */; };
+		528ED97B198EAD2C00E47B23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528ED979198EAD2C00E47B23 /* InfoPlist.strings */; };
+		528ED97D198EAD2C00E47B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED97C198EAD2C00E47B23 /* main.m */; };
+		528ED981198EAD2D00E47B23 /* SkyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED980198EAD2D00E47B23 /* SkyAppDelegate.m */; };
+		528ED984198EAD2D00E47B23 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528ED982198EAD2D00E47B23 /* Main_iPhone.storyboard */; };
+		528ED987198EAD2D00E47B23 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528ED985198EAD2D00E47B23 /* Main_iPad.storyboard */; };
+		528ED98A198EAD2D00E47B23 /* SkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED989198EAD2D00E47B23 /* SkyViewController.m */; };
+		528ED98D198EAD2D00E47B23 /* SkyMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED98C198EAD2D00E47B23 /* SkyMyScene.m */; };
+		528ED98F198EAD2D00E47B23 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 528ED98E198EAD2D00E47B23 /* Spaceship.png */; };
+		528ED991198EAD2D00E47B23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528ED990198EAD2D00E47B23 /* Images.xcassets */; };
+		528ED998198EAD2D00E47B23 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED997198EAD2D00E47B23 /* XCTest.framework */; };
+		528ED999198EAD2D00E47B23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED96E198EAD2C00E47B23 /* Foundation.framework */; };
+		528ED99A198EAD2D00E47B23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED972198EAD2C00E47B23 /* UIKit.framework */; };
+		528ED9A2198EAD2D00E47B23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528ED9A0198EAD2D00E47B23 /* InfoPlist.strings */; };
+		528ED9A4198EAD2D00E47B23 /* MazeRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		528ED99B198EAD2D00E47B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528ED963198EAD2C00E47B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 528ED96A198EAD2C00E47B23;
+			remoteInfo = MazeRunner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		528ED96B198EAD2C00E47B23 /* MazeRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		528ED96E198EAD2C00E47B23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		528ED970198EAD2C00E47B23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		528ED972198EAD2C00E47B23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		528ED974198EAD2C00E47B23 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		528ED978198EAD2C00E47B23 /* MazeRunner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeRunner-Info.plist"; sourceTree = "<group>"; };
+		528ED97A198EAD2C00E47B23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		528ED97C198EAD2C00E47B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		528ED97E198EAD2C00E47B23 /* MazeRunner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MazeRunner-Prefix.pch"; sourceTree = "<group>"; };
+		528ED97F198EAD2C00E47B23 /* SkyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyAppDelegate.h; sourceTree = "<group>"; };
+		528ED980198EAD2D00E47B23 /* SkyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyAppDelegate.m; sourceTree = "<group>"; };
+		528ED983198EAD2D00E47B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		528ED986198EAD2D00E47B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		528ED988198EAD2D00E47B23 /* SkyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyViewController.h; sourceTree = "<group>"; };
+		528ED989198EAD2D00E47B23 /* SkyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyViewController.m; sourceTree = "<group>"; };
+		528ED98B198EAD2D00E47B23 /* SkyMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyMyScene.h; sourceTree = "<group>"; };
+		528ED98C198EAD2D00E47B23 /* SkyMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyMyScene.m; sourceTree = "<group>"; };
+		528ED98E198EAD2D00E47B23 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		528ED990198EAD2D00E47B23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		528ED996198EAD2D00E47B23 /* MazeRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		528ED997198EAD2D00E47B23 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		528ED99F198EAD2D00E47B23 /* MazeRunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeRunnerTests-Info.plist"; sourceTree = "<group>"; };
+		528ED9A1198EAD2D00E47B23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeRunnerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528ED968198EAD2C00E47B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528ED971198EAD2C00E47B23 /* CoreGraphics.framework in Frameworks */,
+				528ED973198EAD2C00E47B23 /* UIKit.framework in Frameworks */,
+				528ED975198EAD2C00E47B23 /* SpriteKit.framework in Frameworks */,
+				528ED96F198EAD2C00E47B23 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528ED993198EAD2D00E47B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528ED998198EAD2D00E47B23 /* XCTest.framework in Frameworks */,
+				528ED99A198EAD2D00E47B23 /* UIKit.framework in Frameworks */,
+				528ED999198EAD2D00E47B23 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		528ED962198EAD2C00E47B23 = {
+			isa = PBXGroup;
+			children = (
+				528ED976198EAD2C00E47B23 /* MazeRunner */,
+				528ED99D198EAD2D00E47B23 /* MazeRunnerTests */,
+				528ED96D198EAD2C00E47B23 /* Frameworks */,
+				528ED96C198EAD2C00E47B23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		528ED96C198EAD2C00E47B23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528ED96B198EAD2C00E47B23 /* MazeRunner.app */,
+				528ED996198EAD2D00E47B23 /* MazeRunnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528ED96D198EAD2C00E47B23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				528ED96E198EAD2C00E47B23 /* Foundation.framework */,
+				528ED970198EAD2C00E47B23 /* CoreGraphics.framework */,
+				528ED972198EAD2C00E47B23 /* UIKit.framework */,
+				528ED974198EAD2C00E47B23 /* SpriteKit.framework */,
+				528ED997198EAD2D00E47B23 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		528ED976198EAD2C00E47B23 /* MazeRunner */ = {
+			isa = PBXGroup;
+			children = (
+				528ED97F198EAD2C00E47B23 /* SkyAppDelegate.h */,
+				528ED980198EAD2D00E47B23 /* SkyAppDelegate.m */,
+				528ED982198EAD2D00E47B23 /* Main_iPhone.storyboard */,
+				528ED985198EAD2D00E47B23 /* Main_iPad.storyboard */,
+				528ED988198EAD2D00E47B23 /* SkyViewController.h */,
+				528ED989198EAD2D00E47B23 /* SkyViewController.m */,
+				528ED98B198EAD2D00E47B23 /* SkyMyScene.h */,
+				528ED98C198EAD2D00E47B23 /* SkyMyScene.m */,
+				528ED98E198EAD2D00E47B23 /* Spaceship.png */,
+				528ED990198EAD2D00E47B23 /* Images.xcassets */,
+				528ED977198EAD2C00E47B23 /* Supporting Files */,
+			);
+			path = MazeRunner;
+			sourceTree = "<group>";
+		};
+		528ED977198EAD2C00E47B23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528ED978198EAD2C00E47B23 /* MazeRunner-Info.plist */,
+				528ED979198EAD2C00E47B23 /* InfoPlist.strings */,
+				528ED97C198EAD2C00E47B23 /* main.m */,
+				528ED97E198EAD2C00E47B23 /* MazeRunner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		528ED99D198EAD2D00E47B23 /* MazeRunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */,
+				528ED99E198EAD2D00E47B23 /* Supporting Files */,
+			);
+			path = MazeRunnerTests;
+			sourceTree = "<group>";
+		};
+		528ED99E198EAD2D00E47B23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528ED99F198EAD2D00E47B23 /* MazeRunnerTests-Info.plist */,
+				528ED9A0198EAD2D00E47B23 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528ED96A198EAD2C00E47B23 /* MazeRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528ED9A7198EAD2D00E47B23 /* Build configuration list for PBXNativeTarget "MazeRunner" */;
+			buildPhases = (
+				528ED967198EAD2C00E47B23 /* Sources */,
+				528ED968198EAD2C00E47B23 /* Frameworks */,
+				528ED969198EAD2C00E47B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MazeRunner;
+			productName = MazeRunner;
+			productReference = 528ED96B198EAD2C00E47B23 /* MazeRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		528ED995198EAD2D00E47B23 /* MazeRunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528ED9AA198EAD2D00E47B23 /* Build configuration list for PBXNativeTarget "MazeRunnerTests" */;
+			buildPhases = (
+				528ED992198EAD2D00E47B23 /* Sources */,
+				528ED993198EAD2D00E47B23 /* Frameworks */,
+				528ED994198EAD2D00E47B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				528ED99C198EAD2D00E47B23 /* PBXTargetDependency */,
+			);
+			name = MazeRunnerTests;
+			productName = MazeRunnerTests;
+			productReference = 528ED996198EAD2D00E47B23 /* MazeRunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528ED963198EAD2C00E47B23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Sky;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nimbler World, Inc.";
+				TargetAttributes = {
+					528ED995198EAD2D00E47B23 = {
+						TestTargetID = 528ED96A198EAD2C00E47B23;
+					};
+				};
+			};
+			buildConfigurationList = 528ED966198EAD2C00E47B23 /* Build configuration list for PBXProject "MazeRunner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528ED962198EAD2C00E47B23;
+			productRefGroup = 528ED96C198EAD2C00E47B23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528ED96A198EAD2C00E47B23 /* MazeRunner */,
+				528ED995198EAD2D00E47B23 /* MazeRunnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528ED969198EAD2C00E47B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528ED98F198EAD2D00E47B23 /* Spaceship.png in Resources */,
+				528ED991198EAD2D00E47B23 /* Images.xcassets in Resources */,
+				528ED987198EAD2D00E47B23 /* Main_iPad.storyboard in Resources */,
+				528ED984198EAD2D00E47B23 /* Main_iPhone.storyboard in Resources */,
+				528ED97B198EAD2C00E47B23 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528ED994198EAD2D00E47B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528ED9A2198EAD2D00E47B23 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528ED967198EAD2C00E47B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528ED98A198EAD2D00E47B23 /* SkyViewController.m in Sources */,
+				528ED981198EAD2D00E47B23 /* SkyAppDelegate.m in Sources */,
+				528ED98D198EAD2D00E47B23 /* SkyMyScene.m in Sources */,
+				528ED97D198EAD2C00E47B23 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528ED992198EAD2D00E47B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528ED9A4198EAD2D00E47B23 /* MazeRunnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		528ED99C198EAD2D00E47B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 528ED96A198EAD2C00E47B23 /* MazeRunner */;
+			targetProxy = 528ED99B198EAD2D00E47B23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		528ED979198EAD2C00E47B23 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528ED97A198EAD2C00E47B23 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		528ED982198EAD2D00E47B23 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528ED983198EAD2D00E47B23 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		528ED985198EAD2D00E47B23 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528ED986198EAD2D00E47B23 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		528ED9A0198EAD2D00E47B23 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528ED9A1198EAD2D00E47B23 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		528ED9A5198EAD2D00E47B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		528ED9A6198EAD2D00E47B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		528ED9A8198EAD2D00E47B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeRunner/MazeRunner-Prefix.pch";
+				INFOPLIST_FILE = "MazeRunner/MazeRunner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		528ED9A9198EAD2D00E47B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeRunner/MazeRunner-Prefix.pch";
+				INFOPLIST_FILE = "MazeRunner/MazeRunner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		528ED9AB198EAD2D00E47B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MazeRunner.app/MazeRunner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeRunner/MazeRunner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MazeRunnerTests/MazeRunnerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		528ED9AC198EAD2D00E47B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MazeRunner.app/MazeRunner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MazeRunner/MazeRunner-Prefix.pch";
+				INFOPLIST_FILE = "MazeRunnerTests/MazeRunnerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528ED966198EAD2C00E47B23 /* Build configuration list for PBXProject "MazeRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528ED9A5198EAD2D00E47B23 /* Debug */,
+				528ED9A6198EAD2D00E47B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528ED9A7198EAD2D00E47B23 /* Build configuration list for PBXNativeTarget "MazeRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528ED9A8198EAD2D00E47B23 /* Debug */,
+				528ED9A9198EAD2D00E47B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		528ED9AA198EAD2D00E47B23 /* Build configuration list for PBXNativeTarget "MazeRunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528ED9AB198EAD2D00E47B23 /* Debug */,
+				528ED9AC198EAD2D00E47B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528ED963198EAD2C00E47B23 /* Project object */;
+}
