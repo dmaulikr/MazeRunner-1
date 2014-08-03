@@ -62,6 +62,7 @@
 		528ED99F198EAD2D00E47B23 /* MazeRunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeRunnerTests-Info.plist"; sourceTree = "<group>"; };
 		528ED9A1198EAD2D00E47B23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeRunnerTests.m; sourceTree = "<group>"; };
+		528ED9AE198EB51D00E47B23 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 				528ED98E198EAD2D00E47B23 /* Spaceship.png */,
 				528ED990198EAD2D00E47B23 /* Images.xcassets */,
 				528ED977198EAD2C00E47B23 /* Supporting Files */,
+				528ED9AE198EB51D00E47B23 /* UIConstants.h */,
 			);
 			path = MazeRunner;
 			sourceTree = "<group>";

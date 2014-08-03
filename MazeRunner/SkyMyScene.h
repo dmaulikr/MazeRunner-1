@@ -10,4 +10,6 @@
 
 @interface SkyMyScene : SKScene
 
+@property(strong, nonatomic) SKSpriteNode *character;
+
 @end
