@@ -12,7 +12,8 @@
 #define TOUCH_UP_DOWN_PERCENTAGE 0.25
 #define TOUCH_LEFT_RIGHT_PERCENTAGE 0.25
 
-#define MOVE_DISTANCE 30
+#define MOVE_DISTANCE 40
+#define TUNNEL_WIDTH 40
 #define MOVE_TIME 0.25  // seconds
 
 #endif

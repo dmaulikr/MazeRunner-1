@@ -25,6 +25,8 @@
 		528ED99A198EAD2D00E47B23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED972198EAD2C00E47B23 /* UIKit.framework */; };
 		528ED9A2198EAD2D00E47B23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528ED9A0198EAD2D00E47B23 /* InfoPlist.strings */; };
 		528ED9A4198EAD2D00E47B23 /* MazeRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */; };
+		528ED9B2198F430100E47B23 /* SkyTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9B1198F430000E47B23 /* SkyTunnel.m */; };
+		528ED9B8198F69EF00E47B23 /* SkyCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9B7198F69EF00E47B23 /* SkyCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,11 @@
 		528ED9A1198EAD2D00E47B23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeRunnerTests.m; sourceTree = "<group>"; };
 		528ED9AE198EB51D00E47B23 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
+		528ED9B0198F430000E47B23 /* SkyTunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyTunnel.h; sourceTree = "<group>"; };
+		528ED9B1198F430000E47B23 /* SkyTunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyTunnel.m; sourceTree = "<group>"; };
+		528ED9B5198F5D5600E47B23 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		528ED9B6198F69EF00E47B23 /* SkyCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyCharacter.h; sourceTree = "<group>"; };
+		528ED9B7198F69EF00E47B23 /* SkyCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +139,15 @@
 				528ED989198EAD2D00E47B23 /* SkyViewController.m */,
 				528ED98B198EAD2D00E47B23 /* SkyMyScene.h */,
 				528ED98C198EAD2D00E47B23 /* SkyMyScene.m */,
+				528ED9B0198F430000E47B23 /* SkyTunnel.h */,
+				528ED9B1198F430000E47B23 /* SkyTunnel.m */,
+				528ED9B6198F69EF00E47B23 /* SkyCharacter.h */,
+				528ED9B7198F69EF00E47B23 /* SkyCharacter.m */,
 				528ED98E198EAD2D00E47B23 /* Spaceship.png */,
 				528ED990198EAD2D00E47B23 /* Images.xcassets */,
 				528ED977198EAD2C00E47B23 /* Supporting Files */,
 				528ED9AE198EB51D00E47B23 /* UIConstants.h */,
+				528ED9B5198F5D5600E47B23 /* Logging.h */,
 			);
 			path = MazeRunner;
 			sourceTree = "<group>";
@@ -272,7 +284,9 @@
 				528ED98A198EAD2D00E47B23 /* SkyViewController.m in Sources */,
 				528ED981198EAD2D00E47B23 /* SkyAppDelegate.m in Sources */,
 				528ED98D198EAD2D00E47B23 /* SkyMyScene.m in Sources */,
+				528ED9B2198F430100E47B23 /* SkyTunnel.m in Sources */,
 				528ED97D198EAD2C00E47B23 /* main.m in Sources */,
+				528ED9B8198F69EF00E47B23 /* SkyCharacter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +503,7 @@
 				528ED9A9198EAD2D00E47B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528ED9AA198EAD2D00E47B23 /* Build configuration list for PBXNativeTarget "MazeRunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +512,7 @@
 				528ED9AC198EAD2D00E47B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 #import "SkyMyScene.h"
 #import "UIConstants.h"
+#import "SkyTunnel.h"
 
 typedef enum {
     MOVE_UP,
@@ -25,21 +26,31 @@ typedef enum {
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        UIColor *wallColor = [UIColor colorWithWhite:1.0 alpha:1.0];
-        CGSize wall1Size = CGSizeMake(120.0, 40.0);
-        SKSpriteNode *wall1 = [SKSpriteNode spriteNodeWithColor:wallColor size:wall1Size];
-        wall1.position = CGPointMake(CGRectGetMidX(self.frame),
+        SkyTunnel *tunnel1 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:5];
+        tunnel1.position = CGPointMake(CGRectGetMidX(self.frame),
+                                       CGRectGetMidY(self.frame));  // set tunnel 1 in middle of screen
+        [self addChild:[tunnel1 tunnelSpriteNode]];
+        self.tunnel1 = tunnel1;
+        
+        SkyTunnel *tunnel2 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:5];
+        [tunnel1 makeConnectionWithTunnel:tunnel2 atSelfPosition:0 withTunnel2Position:1];
+        [self addChild:[tunnel2 tunnelSpriteNode]];
+
+        SkyTunnel *tunnel3 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:4];
+        [tunnel2 makeConnectionWithTunnel:tunnel3 atSelfPosition:3 withTunnel2Position:1];
+        [self addChild:[tunnel3 tunnelSpriteNode]];
+
+        self.spaceship = [[SkyCharacter alloc] init];
+        self.spaceship.currentTunnel = tunnel1;
+        self.spaceship.tunnelPosition = 2;  // middle of tunnel1
+        
+        SKSpriteNode *spaceshipSprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+        
+        spaceshipSprite.position = CGPointMake(CGRectGetMidX(self.frame),
                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:wall1];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = CGPointMake(CGRectGetMidX(self.frame),
-                                      CGRectGetMidY(self.frame));
-        [sprite setScale:0.10];
-        [self addChild:sprite];
-        self.character = sprite;
+        [spaceshipSprite setScale:0.10];
+        [self addChild:spaceshipSprite];
+        self.spaceshipSprite = spaceshipSprite;
 
     }
     return self;
@@ -55,25 +66,69 @@ typedef enum {
         CGFloat move_y = 0;
         
         if (command == MOVE_UP) {
-            move_y = -30;
-            [self.character setZRotation:3.1415];
+            SkyTunnel *newtunnel = [self.spaceship.currentTunnel canMoveInDirection:UP_DIRECTION
+                                                        forPosition:self.spaceship.tunnelPosition
+                                                   checkConnections:true];
+            if (newtunnel) {
+                if (newtunnel != self.spaceship.currentTunnel) {
+                    self.spaceship.tunnelPosition = [[self.spaceship.currentTunnel.connectingPositions
+                                                      objectAtIndex:self.spaceship.tunnelPosition] integerValue];
+                    self.spaceship.currentTunnel = newtunnel;
+                }
+                self.spaceship.tunnelPosition = self.spaceship.tunnelPosition + 1;
+                move_y = MOVE_DISTANCE;
+                [self.spaceshipSprite setZRotation:0.0];
+            }
         }
         else if (command == MOVE_DOWN) {
-            move_y = 30;
-            [self.character setZRotation:0.0];
+            SkyTunnel *newtunnel = [self.spaceship.currentTunnel canMoveInDirection:DOWN_DIRECTION
+                                                        forPosition:self.spaceship.tunnelPosition
+                                                   checkConnections:true];
+            if (newtunnel) {
+                if (newtunnel != self.spaceship.currentTunnel) {
+                    self.spaceship.tunnelPosition = [[self.spaceship.currentTunnel.connectingPositions
+                                                      objectAtIndex:self.spaceship.tunnelPosition] integerValue];
+                    self.spaceship.currentTunnel = newtunnel;
+                }
+                self.spaceship.tunnelPosition = self.spaceship.tunnelPosition - 1;
+                move_y = -MOVE_DISTANCE;
+                [self.spaceshipSprite setZRotation:M_PI];
+            }
         }
         else if (command == MOVE_LEFT) {
-            move_x =-30;
-            [self.character setZRotation:(3.1415/2)];
+            SkyTunnel *newtunnel = [self.spaceship.currentTunnel canMoveInDirection:LEFT_DIRECTION
+                                                        forPosition:self.spaceship.tunnelPosition
+                                                   checkConnections:true];
+            if (newtunnel) {
+                if (newtunnel != self.spaceship.currentTunnel) {
+                    self.spaceship.tunnelPosition = [[self.spaceship.currentTunnel.connectingPositions
+                                                      objectAtIndex:self.spaceship.tunnelPosition] integerValue];
+                    self.spaceship.currentTunnel = newtunnel;
+                }
+                self.spaceship.tunnelPosition = self.spaceship.tunnelPosition - 1;
+                move_x =-MOVE_DISTANCE;
+                [self.spaceshipSprite setZRotation:(M_PI/2)];
+            }
         }
         else if (command == MOVE_RIGHT){
-            move_x =30;
-            [self.character setZRotation:(3.1415*1.5)];
+            SkyTunnel *newtunnel = [self.spaceship.currentTunnel canMoveInDirection:RIGHT_DIRECTION
+                                                        forPosition:self.spaceship.tunnelPosition
+                                                   checkConnections:true];
+            if (newtunnel) {
+                if (newtunnel != self.spaceship.currentTunnel) {
+                    self.spaceship.tunnelPosition = [[self.spaceship.currentTunnel.connectingPositions
+                                                      objectAtIndex:self.spaceship.tunnelPosition] integerValue];
+                    self.spaceship.currentTunnel = newtunnel;
+                }
+                self.spaceship.tunnelPosition = self.spaceship.tunnelPosition + 1;
+                move_x =MOVE_DISTANCE;
+                [self.spaceshipSprite setZRotation:(M_PI*1.5)];
+            }
         }
         
         if (move_x != 0 || move_y != 0) {
             SKAction *action = [SKAction moveByX:move_x y:move_y duration:MOVE_TIME];
-            [self.character runAction:action];
+            [self.spaceshipSprite runAction:action];
         }
 
     }
@@ -89,10 +144,10 @@ typedef enum {
     CGFloat width = CGRectGetWidth(frame);
     
     if (location.y/height < TOUCH_UP_DOWN_PERCENTAGE) {
-        return MOVE_UP;
+        return MOVE_DOWN;
     }
     else if (location.y/height > (1 - TOUCH_UP_DOWN_PERCENTAGE)) {
-        return MOVE_DOWN;
+        return MOVE_UP;
     }
     else if (location.x/width < TOUCH_LEFT_RIGHT_PERCENTAGE) {
         return MOVE_LEFT;
