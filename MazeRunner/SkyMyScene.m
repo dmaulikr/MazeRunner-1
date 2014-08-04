@@ -25,6 +25,14 @@ typedef enum {
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
+        UIColor *wallColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+        CGSize wall1Size = CGSizeMake(120.0, 40.0);
+        SKSpriteNode *wall1 = [SKSpriteNode spriteNodeWithColor:wallColor size:wall1Size];
+        wall1.position = CGPointMake(CGRectGetMidX(self.frame),
+                                      CGRectGetMidY(self.frame));
+        
+        [self addChild:wall1];
+        
         SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
         
         sprite.position = CGPointMake(CGRectGetMidX(self.frame),
@@ -32,6 +40,7 @@ typedef enum {
         [sprite setScale:0.10];
         [self addChild:sprite];
         self.character = sprite;
+
     }
     return self;
 }
@@ -47,15 +56,19 @@ typedef enum {
         
         if (command == MOVE_UP) {
             move_y = -30;
+            [self.character setZRotation:3.1415];
         }
         else if (command == MOVE_DOWN) {
             move_y = 30;
+            [self.character setZRotation:0.0];
         }
         else if (command == MOVE_LEFT) {
             move_x =-30;
+            [self.character setZRotation:(3.1415/2)];
         }
         else if (command == MOVE_RIGHT){
             move_x =30;
+            [self.character setZRotation:(3.1415*1.5)];
         }
         
         if (move_x != 0 || move_y != 0) {
