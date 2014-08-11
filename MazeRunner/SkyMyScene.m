@@ -39,18 +39,28 @@ typedef enum {
         SkyTunnel *tunnel3 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:4];
         [tunnel2 makeConnectionWithTunnel:tunnel3 atSelfPosition:3 withTunnel2Position:1];
         [self addChild:[tunnel3 tunnelSpriteNode]];
-
+        
+        SkyTunnel *tunnel4 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:6];
+        [tunnel1 makeConnectionWithTunnel:tunnel4 atSelfPosition:4 withTunnel2Position:5];
+        [self addChild:[tunnel4 tunnelSpriteNode]];
+        
         self.spaceship = [[SkyCharacter alloc] init];
         self.spaceship.currentTunnel = tunnel1;
         self.spaceship.tunnelPosition = 2;  // middle of tunnel1
         
         SKSpriteNode *spaceshipSprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
         
+        SKSpriteNode *hourglassSprite= [SKSpriteNode spriteNodeWithImageNamed:@"Blue hourglass"];
+        hourglassSprite.position = CGPointMake(240,78);
+        [hourglassSprite setScale:0.15];
+        [self addChild:hourglassSprite];
+        
         spaceshipSprite.position = CGPointMake(CGRectGetMidX(self.frame),
                                       CGRectGetMidY(self.frame));
         [spaceshipSprite setScale:0.10];
         [self addChild:spaceshipSprite];
         self.spaceshipSprite = spaceshipSprite;
+
 
     }
     return self;

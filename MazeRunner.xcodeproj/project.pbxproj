@@ -27,6 +27,7 @@
 		528ED9A4198EAD2D00E47B23 /* MazeRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */; };
 		528ED9B2198F430100E47B23 /* SkyTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9B1198F430000E47B23 /* SkyTunnel.m */; };
 		528ED9B8198F69EF00E47B23 /* SkyCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9B7198F69EF00E47B23 /* SkyCharacter.m */; };
+		528ED9BA1998749C00E47B23 /* Blue hourglass in Resources */ = {isa = PBXBuildFile; fileRef = 528ED9B91998749C00E47B23 /* Blue hourglass */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		528ED9B5198F5D5600E47B23 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		528ED9B6198F69EF00E47B23 /* SkyCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyCharacter.h; sourceTree = "<group>"; };
 		528ED9B7198F69EF00E47B23 /* SkyCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyCharacter.m; sourceTree = "<group>"; };
+		528ED9B91998749C00E47B23 /* Blue hourglass */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue hourglass"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				528ED9B1198F430000E47B23 /* SkyTunnel.m */,
 				528ED9B6198F69EF00E47B23 /* SkyCharacter.h */,
 				528ED9B7198F69EF00E47B23 /* SkyCharacter.m */,
+				528ED9B91998749C00E47B23 /* Blue hourglass */,
 				528ED98E198EAD2D00E47B23 /* Spaceship.png */,
 				528ED990198EAD2D00E47B23 /* Images.xcassets */,
 				528ED977198EAD2C00E47B23 /* Supporting Files */,
@@ -260,6 +263,7 @@
 			files = (
 				528ED98F198EAD2D00E47B23 /* Spaceship.png in Resources */,
 				528ED991198EAD2D00E47B23 /* Images.xcassets in Resources */,
+				528ED9BA1998749C00E47B23 /* Blue hourglass in Resources */,
 				528ED987198EAD2D00E47B23 /* Main_iPad.storyboard in Resources */,
 				528ED984198EAD2D00E47B23 /* Main_iPhone.storyboard in Resources */,
 				528ED97B198EAD2C00E47B23 /* InfoPlist.strings in Resources */,
