@@ -38,11 +38,11 @@
     CGFloat height = 0.0;
     CGFloat width = 0.0;
     if (self.direction == VERTICAL_TUNNEL) {
-        width = TUNNEL_WIDTH;
-        height = TUNNEL_WIDTH + MOVE_DISTANCE * (self.length - 1);
+        width = TUNNEL_WIDTH - (TUNNEL_BOUNDARY_BUFFER * 2);
+        height = TUNNEL_WIDTH + MOVE_DISTANCE * (self.length - 1) - (TUNNEL_BOUNDARY_BUFFER * 2);
     } else {
-        height = TUNNEL_WIDTH;
-        width = TUNNEL_WIDTH + MOVE_DISTANCE * (self.length - 1);
+        height = TUNNEL_WIDTH - (TUNNEL_BOUNDARY_BUFFER * 2);
+        width = TUNNEL_WIDTH + MOVE_DISTANCE * (self.length - 1) - (TUNNEL_BOUNDARY_BUFFER * 2);
     }
     CGSize size = CGSizeMake(width, height);
     return size;

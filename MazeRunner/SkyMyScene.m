@@ -9,6 +9,7 @@
 #import "SkyMyScene.h"
 #import "UIConstants.h"
 #import "SkyTunnel.h"
+#import "Logging.h"
 
 typedef enum {
     MOVE_UP,
@@ -24,6 +25,15 @@ typedef enum {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        /* Set-up timer */
+        self.startTime = 0.0;
+        self.timerText = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        self.timerText.fontColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+        self.timerText.fontSize = 14.0;
+        self.timerText.text = @"15.0";
+        self.timerText.position = CGPointMake(CGRectGetMidX(self.frame), 40.0);
+        [self addChild:self.timerText];
+        
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
         SkyTunnel *tunnel1 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:5];
@@ -37,7 +47,7 @@ typedef enum {
         [self addChild:[tunnel2 tunnelSpriteNode]];
 
         SkyTunnel *tunnel3 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:4];
-        [tunnel2 makeConnectionWithTunnel:tunnel3 atSelfPosition:3 withTunnel2Position:1];
+        [tunnel2 makeConnectionWithTunnel:tunnel3 atSelfPosition:2 withTunnel2Position:1];
         [self addChild:[tunnel3 tunnelSpriteNode]];
         
         SkyTunnel *tunnel4 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:6];
@@ -51,7 +61,7 @@ typedef enum {
         SKSpriteNode *spaceshipSprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
         
         SKSpriteNode *hourglassSprite= [SKSpriteNode spriteNodeWithImageNamed:@"Blue hourglass"];
-        hourglassSprite.position = CGPointMake(240,78);
+        hourglassSprite.position = CGPointMake(248,58);
         [hourglassSprite setScale:0.15];
         [self addChild:hourglassSprite];
         
@@ -170,6 +180,12 @@ typedef enum {
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    if (self.startTime == 0) {
+        self.startTime = currentTime;
+        self.endTime = currentTime + TIMER_SECONDS;
+    }
+    self.currentTime = currentTime;
+    self.timerText.text = [NSString stringWithFormat:@"%2.1f",(self.endTime - self.currentTime)];
 }
 
 @end
