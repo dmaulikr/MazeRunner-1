@@ -24,7 +24,7 @@ typedef enum {
 @interface SkyTunnel : NSObject
 
 @property(nonatomic) TUNNEL_DIRECTION direction;
-@property(nonatomic) unsigned length;
+@property(nonatomic) unsigned long length;
 @property(nonatomic) CGPoint position;
 @property(strong,nonatomic) NSMutableArray *connectingTunnels;  // Array of equal length of this tunnel.  Has either [NSNull null] or a connecting SkyTunnel object
 @property(strong,nonatomic) NSMutableArray *connectingPositions;  // Array of equal length of this tunnel.  Has either [NSNull null] of the a NSNumber with the connecting position on the connecting tunnel
@@ -47,7 +47,7 @@ typedef enum {
 // Usually the tunnel returned will be self, but if they moved to a connected tunnel, the connected tunnel is returned
 // If checkConnections is true, it will check for ability to move on connecting tunnels
 - (SkyTunnel *)canMoveInDirection:(MOVE_DIRECTION)direction
-                      forPosition:(unsigned)position
+                      forPosition:(unsigned long)position
                  checkConnections:(BOOL)checkConnections;
 
 @end

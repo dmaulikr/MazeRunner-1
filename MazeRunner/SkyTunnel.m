@@ -105,7 +105,7 @@
 // Returns the tunnel the person is in if they are able to move in that direction
 // Usually the tunnel returned will be self, but if they moved to a connected tunnel, the connected tunnel is returned
 - (SkyTunnel *)canMoveInDirection:(MOVE_DIRECTION)direction
-                      forPosition:(unsigned)position
+                      forPosition:(unsigned long)position
                  checkConnections:(BOOL)checkConnections
 {
     if (self.direction == VERTICAL_TUNNEL) {

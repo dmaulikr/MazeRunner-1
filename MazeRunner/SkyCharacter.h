@@ -12,6 +12,6 @@
 @interface SkyCharacter : NSObject
 
 @property(strong,nonatomic) SkyTunnel *currentTunnel;
-@property(nonatomic) unsigned tunnelPosition;
+@property(nonatomic) unsigned long tunnelPosition;
 
 @end
