@@ -50,11 +50,31 @@ class SkyMyScene: SKScene
             
             // Here is where you need to insert you code to set how much 
             // to move in the x direction (left / right) or the y direction (up / down)
+            // move_x is the variable for the number of pixels you move left or right
+            // move_y is the variable for the number of pixels you move up or down
+            //
             
-            
+            if command == TouchCommand.MOVE_UP {
+                move_y = 30
+                self.character.zRotation = 0  // Extra credit, adjust rotation
+            }
+            if command == TouchCommand.MOVE_DOWN {
+                move_y = -30
+                self.character.zRotation = CGFloat(M_PI)  // Extra credit, adjust rotation
+            }
+            if command == TouchCommand.MOVE_LEFT {
+                move_x = -30
+                self.character.zRotation = CGFloat(M_PI * 0.5)  // Extra credit, adjust rotation
+            }
+            if command == TouchCommand.MOVE_RIGHT {
+                move_x = 30
+                self.character.zRotation = CGFloat(M_PI * 1.5)  // Extra credit, adjust rotation
+            }
+            // End Lesson 1 required code
             
             if (move_x != 0 || move_y != 0) {
                 let action:SKAction = SKAction.moveByX(move_x, y: move_y, duration: 0.25)
+                self.character.runAction(action)
             }
             
         }
@@ -69,9 +89,12 @@ class SkyMyScene: SKScene
         let width = CGRectGetWidth(frame)
         
         if (location.y/height < 0.25) {
-            return TouchCommand.MOVE_UP
+            return TouchCommand.MOVE_DOWN
         }
         else if (location.y/height > (1 - 0.25)) {
+            return TouchCommand.MOVE_UP
+        }
+        else if (location.x/width < 0.25) {
             return TouchCommand.MOVE_LEFT
         }
         else if (location.x/width > (1 - 0.25)) {
