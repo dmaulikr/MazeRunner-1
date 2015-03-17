@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5253E7D51AB6A11300111ECB /* SkyMyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253E7D41AB6A11300111ECB /* SkyMyScene.swift */; };
 		528ED96F198EAD2C00E47B23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED96E198EAD2C00E47B23 /* Foundation.framework */; };
 		528ED971198EAD2C00E47B23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED970198EAD2C00E47B23 /* CoreGraphics.framework */; };
 		528ED973198EAD2C00E47B23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED972198EAD2C00E47B23 /* UIKit.framework */; };
@@ -17,7 +18,6 @@
 		528ED984198EAD2D00E47B23 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528ED982198EAD2D00E47B23 /* Main_iPhone.storyboard */; };
 		528ED987198EAD2D00E47B23 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528ED985198EAD2D00E47B23 /* Main_iPad.storyboard */; };
 		528ED98A198EAD2D00E47B23 /* SkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED989198EAD2D00E47B23 /* SkyViewController.m */; };
-		528ED98D198EAD2D00E47B23 /* SkyMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED98C198EAD2D00E47B23 /* SkyMyScene.m */; };
 		528ED98F198EAD2D00E47B23 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 528ED98E198EAD2D00E47B23 /* Spaceship.png */; };
 		528ED991198EAD2D00E47B23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528ED990198EAD2D00E47B23 /* Images.xcassets */; };
 		528ED998198EAD2D00E47B23 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED997198EAD2D00E47B23 /* XCTest.framework */; };
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5253E7D31AB6A11200111ECB /* MazeRunner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MazeRunner-Bridging-Header.h"; sourceTree = "<group>"; };
+		5253E7D41AB6A11300111ECB /* SkyMyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyMyScene.swift; sourceTree = "<group>"; };
 		528ED96B198EAD2C00E47B23 /* MazeRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528ED96E198EAD2C00E47B23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		528ED970198EAD2C00E47B23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,8 +55,6 @@
 		528ED986198EAD2D00E47B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		528ED988198EAD2D00E47B23 /* SkyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyViewController.h; sourceTree = "<group>"; };
 		528ED989198EAD2D00E47B23 /* SkyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyViewController.m; sourceTree = "<group>"; };
-		528ED98B198EAD2D00E47B23 /* SkyMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyMyScene.h; sourceTree = "<group>"; };
-		528ED98C198EAD2D00E47B23 /* SkyMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyMyScene.m; sourceTree = "<group>"; };
 		528ED98E198EAD2D00E47B23 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		528ED990198EAD2D00E47B23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		528ED996198EAD2D00E47B23 /* MazeRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,12 +130,12 @@
 				528ED985198EAD2D00E47B23 /* Main_iPad.storyboard */,
 				528ED988198EAD2D00E47B23 /* SkyViewController.h */,
 				528ED989198EAD2D00E47B23 /* SkyViewController.m */,
-				528ED98B198EAD2D00E47B23 /* SkyMyScene.h */,
-				528ED98C198EAD2D00E47B23 /* SkyMyScene.m */,
+				5253E7D41AB6A11300111ECB /* SkyMyScene.swift */,
 				528ED98E198EAD2D00E47B23 /* Spaceship.png */,
 				528ED990198EAD2D00E47B23 /* Images.xcassets */,
 				528ED977198EAD2C00E47B23 /* Supporting Files */,
 				528ED9AE198EB51D00E47B23 /* UIConstants.h */,
+				5253E7D31AB6A11200111ECB /* MazeRunner-Bridging-Header.h */,
 			);
 			path = MazeRunner;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			files = (
 				528ED98A198EAD2D00E47B23 /* SkyViewController.m in Sources */,
 				528ED981198EAD2D00E47B23 /* SkyAppDelegate.m in Sources */,
-				528ED98D198EAD2D00E47B23 /* SkyMyScene.m in Sources */,
+				5253E7D51AB6A11300111ECB /* SkyMyScene.swift in Sources */,
 				528ED97D198EAD2C00E47B23 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,11 +407,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeRunner/MazeRunner-Prefix.pch";
 				INFOPLIST_FILE = "MazeRunner/MazeRunner-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MazeRunner/MazeRunner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -421,11 +425,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeRunner/MazeRunner-Prefix.pch";
 				INFOPLIST_FILE = "MazeRunner/MazeRunner-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MazeRunner/MazeRunner-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -489,6 +496,7 @@
 				528ED9A9198EAD2D00E47B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528ED9AA198EAD2D00E47B23 /* Build configuration list for PBXNativeTarget "MazeRunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +505,7 @@
 				528ED9AC198EAD2D00E47B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

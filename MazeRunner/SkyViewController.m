@@ -7,7 +7,7 @@
 //
 
 #import "SkyViewController.h"
-#import "SkyMyScene.h"
+#import "MazeRunner-Swift.h"
 
 @implementation SkyViewController
 
