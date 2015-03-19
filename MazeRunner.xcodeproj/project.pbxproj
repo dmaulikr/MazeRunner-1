@@ -25,6 +25,7 @@
 		528ED99A198EAD2D00E47B23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528ED972198EAD2C00E47B23 /* UIKit.framework */; };
 		528ED9A2198EAD2D00E47B23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528ED9A0198EAD2D00E47B23 /* InfoPlist.strings */; };
 		528ED9A4198EAD2D00E47B23 /* MazeRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */; };
+		52D4578E1ABA98530071BEE0 /* PacMan.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D4578D1ABA98530071BEE0 /* PacMan.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		528ED9A1198EAD2D00E47B23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		528ED9A3198EAD2D00E47B23 /* MazeRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeRunnerTests.m; sourceTree = "<group>"; };
 		528ED9AE198EB51D00E47B23 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
+		52D4578D1ABA98530071BEE0 /* PacMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PacMan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				528ED988198EAD2D00E47B23 /* SkyViewController.h */,
 				528ED989198EAD2D00E47B23 /* SkyViewController.m */,
 				5253E7D41AB6A11300111ECB /* SkyMyScene.swift */,
+				52D4578D1ABA98530071BEE0 /* PacMan.png */,
 				528ED98E198EAD2D00E47B23 /* Spaceship.png */,
 				528ED990198EAD2D00E47B23 /* Images.xcassets */,
 				528ED977198EAD2C00E47B23 /* Supporting Files */,
@@ -251,6 +254,7 @@
 				528ED987198EAD2D00E47B23 /* Main_iPad.storyboard in Resources */,
 				528ED984198EAD2D00E47B23 /* Main_iPhone.storyboard in Resources */,
 				528ED97B198EAD2C00E47B23 /* InfoPlist.strings in Resources */,
+				52D4578E1ABA98530071BEE0 /* PacMan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
