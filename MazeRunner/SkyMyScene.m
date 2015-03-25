@@ -36,14 +36,14 @@ typedef enum {
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        SkyTunnel *tunnel1 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:5];
+        SkyTunnel *tunnel1 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:7];
         tunnel1.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));  // set tunnel 1 in middle of screen
         [self addChild:[tunnel1 tunnelSpriteNode]];
         self.tunnel1 = tunnel1;
         
-        SkyTunnel *tunnel2 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:5];
-        [tunnel1 makeConnectionWithTunnel:tunnel2 atSelfPosition:0 withTunnel2Position:1];
+        SkyTunnel *tunnel2 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:6];
+        [tunnel1 makeConnectionWithTunnel:tunnel2 atSelfPosition:1 withTunnel2Position:1];
         [self addChild:[tunnel2 tunnelSpriteNode]];
 
         SkyTunnel *tunnel3 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:4];
@@ -51,12 +51,37 @@ typedef enum {
         [self addChild:[tunnel3 tunnelSpriteNode]];
         
         SkyTunnel *tunnel4 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:6];
-        [tunnel1 makeConnectionWithTunnel:tunnel4 atSelfPosition:4 withTunnel2Position:5];
+        [tunnel1 makeConnectionWithTunnel:tunnel4 atSelfPosition:5 withTunnel2Position:5];
         [self addChild:[tunnel4 tunnelSpriteNode]];
+        
+        SkyTunnel *tunnel5 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:7];
+        [tunnel4 makeConnectionWithTunnel:tunnel5 atSelfPosition:0 withTunnel2Position:5];
+        [self addChild:[tunnel5 tunnelSpriteNode]];
+        
+        SkyTunnel *tunnel6 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:5];
+        [tunnel1 makeConnectionWithTunnel:tunnel6 atSelfPosition:0 withTunnel2Position:4];
+        [self addChild:[tunnel6 tunnelSpriteNode]];
+        
+        SkyTunnel *tunnel7 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:6];
+        [tunnel1 makeConnectionWithTunnel:tunnel7 atSelfPosition:6 withTunnel2Position:0];
+        [self addChild:[tunnel7 tunnelSpriteNode]];
+        
+        SkyTunnel *tunnel8 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:7];
+        [tunnel7 makeConnectionWithTunnel:tunnel8 atSelfPosition:5 withTunnel2Position:6];
+        [self addChild:[tunnel8 tunnelSpriteNode]];
+        
+        SkyTunnel *tunnel9 = [SkyTunnel tunnelWithDirection:HORIZONTAL_TUNNEL length:3];
+        [tunnel2 makeConnectionWithTunnel:tunnel9 atSelfPosition:5 withTunnel2Position:0];
+        [self addChild:[tunnel9 tunnelSpriteNode]];
+        
+        SkyTunnel *tunnel10 = [SkyTunnel tunnelWithDirection:VERTICAL_TUNNEL length:2];
+        [tunnel9 makeConnectionWithTunnel:tunnel10 atSelfPosition:2 withTunnel2Position:0];
+        [tunnel8 makeConnectionWithTunnel:tunnel10 atSelfPosition:3 withTunnel2Position:1];
+        [self addChild:[tunnel10 tunnelSpriteNode]];
         
         self.spaceship = [[SkyCharacter alloc] init];
         self.spaceship.currentTunnel = tunnel1;
-        self.spaceship.tunnelPosition = 2;  // middle of tunnel1
+        self.spaceship.tunnelPosition = 3;  // middle of tunnel1
         
         SKSpriteNode *spaceshipSprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
         
